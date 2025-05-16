@@ -1,0 +1,13 @@
+moviepy==1.0.3
+imageio==2.9.0
+imageio-ffmpeg==0.4.5
+numpy==1.26.4
+pillow==10.4.0
+proglog==0.1.10
+librosa==0.10.1
+pretty_midi==0.2.10
+torch==2.0.1
+transformers==4.39.3
+music21==9.5.0
+pydub==0.25.1
+requests==2.31.0
