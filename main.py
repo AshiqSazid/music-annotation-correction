@@ -61,7 +61,7 @@ def get_llm_feedback(note_errors):
     prompt = f"""A student played with the following errors:\n{note_errors}\nGive feedback on improving intonation, rhythm, and dynamics.\nAlso give a grade out of 100."""
     try:
         response = requests.post("http://localhost:11434/api/generate", json={
-            "model": "deepseek-coder:6.7b",
+            "model": "deepseek-r1:8b",  # ✅ Just the model name as pulled by Ollama
             "prompt": prompt,
             "stream": False
         })
@@ -73,6 +73,7 @@ def get_llm_feedback(note_errors):
             return "⚠️ LLM did not return valid feedback."
     except Exception as e:
         return f"❌ LLM feedback error: {e}"
+
 
 # === Utility Functions ===
 def extract_audio_from_video(video_path: str, output_audio_path: str = "video_audio.wav") -> str:
